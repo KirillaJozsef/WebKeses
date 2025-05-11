@@ -1,0 +1,101 @@
+body {
+  background-image: url('kes.jpeg');
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  backdrop-filter: blur(5px); /* Háttér elmosása */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.2); /* Félig átlátszó háttér */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px); /* Elmosódás a háttér mögött */
+  width: 350px;
+  text-align: center;
+}
+
+h1 {
+  color: #3d3a3a;
+}
+
+.input-box {
+  position: relative;
+  margin: 15px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-box i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color:#3d3a3a;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1f1a1a;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Tab Switcher Styles */
+.tab-switcher {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.tab-switcher button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000; /* Fekete szöveg a jobb láthatóság érdekében */
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  outline: none;
+  backdrop-filter: blur(5px);
+}
+
+.tab-switcher button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #333; /* Sötétebb árnyalat hover állapotban */
+}
+
+.tab-switcher button.active-tab {
+  display: none; /* Hide the button for the currently active tab */
+}
+
+/* Initially hide the register form */
+#register-form {
+  display: none;
+}

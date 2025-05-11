@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üzenetküldés - Vaszilij EDC</title>
+    <link rel="stylesheet" href="szepike.css">
+        <link rel="icon" type="image/png" href="https://vaszilijedc.hu/wp-content/uploads/2018/05/Vaszilij-EDC.jpg.webp">
+    <style>
+        /* Stílus a formázáshoz */
+        .regisztracioka {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .regisztracioka td {
+            padding: 8px;
+        }
+        .regisztracioka input[type="text"],
+        .regisztracioka input[type="email"],
+        .regisztracioka input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        .regisztracioka input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .regisztracioka input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body style="
+            background-image: url('üzenet.jpg');
+            background-size: cover;      
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            ">
+    <nav>
+        <ul>
+            <li><a href="fooldal.html">Kezdőlap</a></li>
+            <li><a href="tamogatas.html">Támogatás</a></li>
+            <li><a href="uzenetkuldes.html" class="active">Üzenetküldés</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="irasok.html">Írások</a></li>
+            <li><a href="kilepes.php">Kilépés</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="content">
+            <h2>Ha üzenetet szeretnél küldeni nekem, itt megteheted:</h2>
+
+            <form id="uzenetForm" class="regisztracioka">
+                <table>
+                    <tr>
+                        <td>Név:</td>
+                        <td><input type="text" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email(saját):</td>
+                        <td><input type="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Tárgy:</td>
+                        <td><input type="text" name="tárgy"></td>
+                    </tr>
+                    <tr>
+                        <td>Üzenet:</td>
+                        <td><textarea name="üzenet" rows="4" style="width:100%"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Telefonszám</td>
+                        <td><input type="number" name="1szam"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Küldés"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    
+    <footer class="transparent-footer">
+        <p>&copy; Készítette: [Hunyadi Krisztofer & Kirilla József & Nagy Kristóf] - Neptun kód: [LE3O8X-FWN10Y-S1LGWD]</p>
+    </footer>
+
+    <script>
+        document.getElementById('uzenetForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Megakadályozza az alapértelmezett form küldést
+            
+            // Üzenet elküldésének szimulálása
+            alert('Az üzenetet sikeresen elküldtük! Köszönjük a visszajelzést.');
+            
+            // Űrlap tartalmának törlése (opcionális)
+            this.reset();
+            
+            // Visszairányítás a főoldalra 3 másodperc múlva (opcionális)
+            setTimeout(function() {
+                window.location.href = "fooldal.html";
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
