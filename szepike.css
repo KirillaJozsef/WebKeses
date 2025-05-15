@@ -1,0 +1,305 @@
+#menu {
+    display: none;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Erősebb árnyék a jobb láthatóságért */
+    background: linear-gradient(to bottom, #3a1d61, #c6c90b); /* Lila és zöld átmenet háttér */
+    padding: 5px;
+    text-align: justify;
+    color: white; /* Fehér szöveg szín */
+    font-size: 18px;
+    max-width: 1200px;
+    margin: auto;
+    overflow: auto;
+}/* Alapértelmezett stílus PC-re */
+
+/* Kisebb képernyők (pl. tabletek, mobilok) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+        max-width: 95%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+
+/* Konténer a szöveghez */
+.container {
+    left: 20%;
+    max-width: 750px ;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.6); /* Fekete áttetsző háttér */
+    backdrop-filter: blur(8px); /* Elmosódás a háttérre */
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Fehér árnyék */
+    color: white; /* Fehér szöveg szín */
+     padding-bottom: 100px; 
+}
+
+/* Címek */
+h2 {
+    font-size: 24px;
+    color: #FFD700; /* Arany szín */
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Bekezdések */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white; /* Fehér szöveg szín */
+}
+
+/* Linkek */
+a {
+    color: #FFD700; /* Arany szín */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #FF6347; /* Világos piros szín hover esetén */
+}
+
+/* Menü navigáció */
+nav ul {
+    display: flex; /* Vízszintes elrendezés */
+    justify-content: center; /* Középre igazítás */
+    list-style: none; /* Alapértelmezett lista stílus eltávolítása */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Távolság az elemek között */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Fehér szín */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(103, 82, 218, 0.2);
+    border-radius: 5px;
+    color: #FFD700; /* Arany szín hover esetén */
+}
+
+/* Menü háttér */
+.bg-pan-tl {
+    background: url('hatter.jpg'),url('blog.jpg'); 
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    min-height: 100vh; /* min-height, hogy mindig kitöltse a képernyőt */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+
+/* Átlátszó footer */
+html, body {
+    height: 100%;
+
+}
+
+footer.transparent-footer {
+    position: relative;
+    bottom: 0;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    padding: 1px 0;
+    font-size: 12px;
+    backdrop-filter: blur(3px);
+    z-index: 99;
+    
+}
+
+
+
+
+img{
+    width: auto;
+    height: 220px;;
+}
+
+.fixed-image {
+    transform: scaleX(-1); 
+    position: fixed;
+    right: 15% auto; 
+    top: 15%; 
+    transform: translateY(-50%); 
+    width: 200px;
+    height: auto; 
+    border-radius : 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Alapból elrejtve, csak görgetéskor jelenjen meg */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+
+}
+
+#scrollToTop:hover {
+    background-color: #ffaa00;
+}
+nav ul li a.active {
+    background-color: rgba(6, 50, 133, 0.5); /* Kiemelés */
+    color: #58065f; /* Kontrasztos szín */
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 5px;
+}
+.social-menu-container {
+  position: fixed;
+  right: 20%;
+  transform: translateX(50%);
+  top: 20%;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.social-menu {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-menu .toggle {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 2em;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  z-index: 5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-menu.active .toggle {
+  transform: rotate(360deg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+              0 0 0 2px #333,
+              0 0 0 8px #fff;
+}
+
+.social-menu ul {
+  position: absolute;
+  top: -30%;
+  right: 28%;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.social-menu ul li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 0;
+  pointer-events: none;
+  list-style: none;
+}
+
+.social-menu.active ul li {
+  opacity: 1;
+  pointer-events: auto;
+  transform: rotate(calc(-360deg / 4 * var(--i))) translateX(100px) rotate(calc(360deg / 4 * var(--i)));
+}
+
+.social-menu ul li:nth-child(1) a { 
+  background: url('images/facebook.png') no-repeat center/cover; 
+}
+
+.social-menu ul li:nth-child(2) a { 
+  background: url('images/instagram.png') no-repeat center/cover; 
+}
+
+.social-menu ul li:nth-child(3) a { 
+  background: url('images/twitter.png') no-repeat center/cover; 
+}
+
+.social-menu ul li:nth-child(4) a { 
+  background: url('images/youtube.png') no-repeat center/cover; 
+}
+
+.social-menu ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5em;
+  transition: all 0.3s ease;
+}
+
+.social-menu ul li a:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.social-menu ul li a:hover {
+  transform: scale(1.1);
+  background: #fff;
+  color: var(--clr);
+  box-shadow: 0 0 15px var(--clr);
+}
+
+/* Reszponzív méretezés */
+@media (max-width: 768px) {
+  .social-menu-container {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 20px;
+    top: auto;
+  }
+  
+  .social-menu.active ul li {
+    transform: rotate(calc(-360deg / 4 * var(--i))) translateX(80px) rotate(calc(360deg / 4 * var(--i)));
+  }
+}
